@@ -10,10 +10,14 @@
         <option value="age">Newest</option>
       </select>
 
+      <div style="margin-top: 20px">
+        <input ng-model="reactProps.name">
+        <div><react-component name="Hello" props="reactProps"/></div>
+      </div>
+
     </div>
     <div class="col-md-10">
       <!--Body content-->
-
       <ul class="phones">
         <li ng-repeat="phone in phones | filter:query | orderBy:orderProp"
             class="thumbnail phone-listing">
