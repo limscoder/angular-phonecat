@@ -11,8 +11,10 @@
       </select>
 
       <div style="margin-top: 20px">
-        <input ng-model="reactProps.userName">
-        <div><react-component name="Hello" props="reactProps"/></div>
+        <input ng-model="userName">
+        <div>
+          <hello user-name="userName" on-name-change="onNameChange"/>
+        </div>
       </div>
 
     </div>

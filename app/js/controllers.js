@@ -6,6 +6,7 @@ var phonecatControllers = angular.module('phonecatControllers', ['react']);
 
 phonecatControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
   function($scope, Phone) {
+    console.log("-------------------------------Making controller-------------------------------")
     $scope.safeApply = function(fn) {
       var phase = this.$root.$$phase;
       if(phase == '$apply' || phase == '$digest') {
@@ -19,14 +20,12 @@ phonecatControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
 
     $scope.phones = Phone.query();
     $scope.orderProp = 'age';
-    $scope.reactProps = {
-      userName: 'Your Name!',
-      onNameChange: function (newName) {
+    $scope.userName = 'from controller';
+    $scope.onNameChange = function (newName) {
         $scope.safeApply(function() {
-          $scope.reactProps.userName = newName;
+          $scope.userName = newName;
         });
-      }
-    };
+      };
   }]);
 
 phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',

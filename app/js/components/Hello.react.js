@@ -8,10 +8,6 @@ module.exports = React.createClass({
         onNameChange: React.PropTypes.func
     },
 
-    componentDidMount: function() {
-        console.log('mounted', this.props);
-    },
-
     getDefaultProps: function() {
         return {userName: 'Default Name'};
     },

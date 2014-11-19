@@ -26,6 +26,7 @@ phonecatApp.config(['$routeProvider',
       });
   }]);
 
-
-// register React component as generic react-component directive
-phonecatApp.value('Hello', reactComponents.Hello);
+// register React component as custom directive
+phonecatApp.directive('hello', function(reactDirective) {
+  return reactDirective(reactComponents.Hello);
+} );
