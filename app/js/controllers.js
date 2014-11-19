@@ -2,11 +2,10 @@
 
 /* Controllers */
 
-var phonecatControllers = angular.module('phonecatControllers', ['react']);
+var phonecatControllers = angular.module('phonecatControllers', []);
 
 phonecatControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
   function($scope, Phone) {
-    console.log("-------------------------------Making controller-------------------------------")
     $scope.safeApply = function(fn) {
       var phase = this.$root.$$phase;
       if(phase == '$apply' || phase == '$digest') {
