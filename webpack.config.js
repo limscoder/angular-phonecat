@@ -16,7 +16,7 @@ module.exports = {
   },
 
   resolve: {
-    modulesDirectories: ['./app/js/components', 'node_modules'],
+    modulesDirectories: ['./app/js/components', 'bower_components'],
     extensions: ['', '.js']
   },
 
